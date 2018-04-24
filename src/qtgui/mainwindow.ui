@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+    <horstretch>1</horstretch>
+    <verstretch>1</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>0</width>
+    <height>0</height>
+   </size>
+  </property>
+  <property name="sizeIncrement">
+   <size>
+    <width>0</width>
+    <height>0</height>
+   </size>
+  </property>
+  <property name="baseSize">
+   <size>
+    <width>0</width>
+    <height>0</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Obj Reader</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../../image.qrc">
+    <normaloff>:/new/prefix1/data/Programs.png</normaloff>:/new/prefix1/data/Programs.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="GLWidget" name="glwidget" native="true">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>1</horstretch>
+        <verstretch>1</verstretch>
+       </sizepolicy>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionOpen_OBJ_File"/>
+    <addaction name="actionClose"/>
+   </widget>
+   <addaction name="menuFile"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionClose">
+   <property name="text">
+    <string>Close</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="actionOpen_OBJ_File">
+   <property name="text">
+    <string>Open OBJ File</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>GLWidget</class>
+   <extends>QWidget</extends>
+   <header location="global">src/qtgui/glwidget.h</header>
+   <container>1</container>
+   <slots>
+    <slot>setValue()</slot>
+    <slot>resultStepChanged(int)</slot>
+    <slot>displayNode(bool)</slot>
+    <slot>displayNodeLabel(bool)</slot>
+    <slot>displayModel(bool)</slot>
+    <slot>displayLoad(bool)</slot>
+    <slot>displayConstraints(boll)</slot>
+    <slot>renderSolid(bool)</slot>
+    <slot>renderWireframe(bool)</slot>
+    <slot>renderHidden(bool)</slot>
+    <slot>renderSolidWireframe(bool)</slot>
+    <slot>resultsIsotrip(bool)</slot>
+    <slot>resultsLabelChanged(QString)</slot>
+    <slot>resultsStepChanged(int)</slot>
+    <slot>resultsDeformedMesh(bool)</slot>
+    <slot>displayMaterial(bool)</slot>
+    <slot>runAnalysis(bool)</slot>
+    <slot>saveCapfile()</slot>
+    <slot>loadCapFile()</slot>
+    <slot>openFile()</slot>
+   </slots>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="../../image.qrc"/>
+ </resources>
+ <connections/>
+ <slots>
+  <slot>openFile()</slot>
+  <slot>saveFile()</slot>
+  <slot>setDeformation()</slot>
+  <slot>applyDeformation(double)</slot>
+  <slot>displayNode(bool)</slot>
+  <slot>displayNodeLabel(bool)</slot>
+  <slot>displayModel(bool)</slot>
+  <slot>displayLoad(bool)</slot>
+  <slot>displayConstraints(bool)</slot>
+  <slot>displayMaterial(bool)</slot>
+  <slot>renderSolid(bool)</slot>
+  <slot>renderWireframe(bool)</slot>
+  <slot>renderSolidWireframe(bool)</slot>
+  <slot>displayIsostrip(bool)</slot>
+  <slot>displayDeformedMesh(bool)</slot>
+  <slot>displayLabelChanged(QString)</slot>
+  <slot>displayStepChanged(int)</slot>
+  <slot>runAnalysis()</slot>
+  <slot>newModel()</slot>
+  <slot>cameraFit()</slot>
+  <slot>zoomIn()</slot>
+  <slot>zoomOut()</slot>
+  <slot>setPan()</slot>
+  <slot>setRotate()</slot>
+  <slot>cameraSetViewFront()</slot>
+  <slot>cameraSetViewTop()</slot>
+  <slot>cameraSetViewRight()</slot>
+  <slot>resultLabelChanged(QString)</slot>
+  <slot>resultStepChanged(int)</slot>
+  <slot>closeProgram()</slot>
+ </slots>
+</ui>

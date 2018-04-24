@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/">
+        <file>icons/document-new.png</file>
+        <file>icons/document-open.png</file>
+        <file>icons/fit.png</file>
+        <file>icons/zoom_in.png</file>
+        <file>icons/zoom_out.png</file>
+        <file>icons/cap3d.png</file>
+        <file>icons/deformada.png</file>
+        <file>icons/isostrip.png</file>
+        <file>icons/model.png</file>
+    </qresource>
+</RCC>
